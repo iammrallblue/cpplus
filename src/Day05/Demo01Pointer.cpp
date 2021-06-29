@@ -13,7 +13,7 @@ using namespace std;
             int * pointerName;
             pointerName = &variable; // 
             or
-            int * pointerName = &variable;
+            int * pointerName = &variable; &variable is the address of the variable.
 
         Key point:
             Pointer variables contain memory addresses as their values.
@@ -40,15 +40,18 @@ int main()
 {
     int x = 10;
     cout << "Memory Location of variable x: " << &x << endl; // 0x7ffee1b78208
+    cout << "The value of variable x: " << x << endl;
 
     // define a pointer
-    int *p = &x;
+    int *p = &x; // &x is the address of the variable x, usually &x will assgin to a pointer.
+    
     // show the value of the pointer p
     cout << "Pointer p = " << p << endl; // 0x7ffeecb0f208, which mean pointer p got the variable x's memory address
 
-    // change value of variable x by pointer *p
+    // Indirection (Dereference) change value of variable x by pointer *p
     *p = 2333;
-    cout << "x = " << x << endl;
-    cout << "*p = " << *p << endl;
+    cout << "Changing value of x by *p (dereference), x = " << x << endl;   // value of variable x
+    cout << "*p = " << *p << endl; // value of variable x
+    cout << "p = " << p << endl;   // the address of variable x.
     return 0;
 }
