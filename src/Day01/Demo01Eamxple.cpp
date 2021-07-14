@@ -2,13 +2,17 @@
 
 using namespace std;
 
+/*
+  A structure of c++ code block
+*/
 int main()
 {
   // print information
-  cout << "Bella\n";
+  cout << "Bella" << endl;
   cout << "Gender: Female\n";
-  cout << "Age: 19\n";
-  cout << "Major: Math \t CS\n"
-       << endl;
+  cout << "Age: 18\n";
+  cout << "Major: Math & CS";
+  cout << endl;
+
   return 0;
 }

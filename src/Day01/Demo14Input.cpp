@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-    Data input:
+    How to input those data types:
         1. Integer
             int x = 0;
 
@@ -16,10 +16,10 @@ using namespace std;
 int main()
 {
     // 1. Integer
-    // int x = 0;
-    // cout << "Input a number: " << endl;
-    // cin >> x;
-    // cout << "The input number is: " << x << endl;
+    int x = 0;
+    cout << "Input a number for assigning value to variable x: " << endl;
+    cin >> x;
+    cout << "The input number " << x << " is assigned to x." << endl;
 
     // // 2. Float point
     // float y = 3.24F;
@@ -31,8 +31,8 @@ int main()
     // char ch = 'a';
     // cout << "Input a letter: " << endl;
     // cin >> ch;
-    // cout << "The input letter is: " << ch << endl;
-    
+    // cout << "The input letter is: " << ch << endl; 
+
     // 4. String
     string str = "Bella";
     cout << "Input a string: " << endl;

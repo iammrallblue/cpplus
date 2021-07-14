@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-    Strings:
+    Strings in C++:
         String Types
             The string type is used to store a sequence of characters (text). 
             This is not a built-in type, but it behaves like one in its most basic usage. 
@@ -12,7 +12,9 @@ using namespace std;
 
         Two styles of String in C++
             1. C lang style 
+                char cha_array[] = "This is a C style string.";
             2. C++ lang style
+                string str = "This is a C++ style string.";
 */
 
 int main()

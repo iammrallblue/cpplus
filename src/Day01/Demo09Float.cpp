@@ -4,9 +4,10 @@ using namespace std;
 
 /*
     Floating point:
-        Stores fractional numbers, containing one or more decimals. Sufficient for storing 7 decimal digits
-    double floating point:
-        Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
+        1. Stores fractional numbers, containing one or more decimals. Sufficient for storing 7 decimal digits
+    
+    Double floating point:
+        2. Stores fractional numbers, containing one or more decimals. Sufficient for storing 15 decimal digits
 
         float	        4bytes	
         double	        8bytes	
@@ -25,12 +26,12 @@ int main()
     // long double
     long double ld_num = 4.9983;
 
-
     // show memory space of float and double by sizeof()
     cout << "Size of float variable: " << sizeof(float_num2) << endl; //  size is 4
 
     cout << "Size of double variable: " << sizeof(double_num) << endl; // size is 8
 
     cout << "Size of long double variable: " << sizeof(ld_num) << endl; // size is 12
+
     return 0;
 }

@@ -4,6 +4,7 @@ using namespace std;
 
 /*
     Escape sequences (Escape Character):
+
         Escape sequence	            Description	            Representation
                             Simple escape sequences
                 \'	                single quote	        byte 0x27 in ASCII encoding
@@ -31,7 +32,7 @@ using namespace std;
 
 int main()
 {
-    // \n
+    // \n == endl
     cout << "Hello Bella \n";
 
     // (\\)

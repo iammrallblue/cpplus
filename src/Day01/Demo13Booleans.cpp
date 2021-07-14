@@ -13,6 +13,8 @@ int main()
     bool is_email = false;
 
     // sizeof()
-    cout << "Size of boolean value" << is_true << " is: " << sizeof(is_true) << endl;
+    cout << "Size of boolean variable " << "is_true" << " is: " << sizeof(is_true) << endl;
+    cout << "Size of boolean value false: " << sizeof(false) << endl;
+
     return 0;
 }

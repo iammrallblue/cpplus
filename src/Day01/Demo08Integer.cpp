@@ -3,6 +3,8 @@ using namespace std;
 
 /*
     Datatype Integer:
+        stores  integral values (whole numbers), both negative and positive:
+        
         short, int, long , long long
 
     Type	            Typical Bit Width	        Typical Range

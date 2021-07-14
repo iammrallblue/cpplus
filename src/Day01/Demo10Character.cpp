@@ -4,11 +4,15 @@ using namespace std;
 
 /*
     Character Types
-        The char data type is used to store a single character. 
-        The character must be surrounded by single quotes, like 'A' or 'c':
+        1. The char data type is used to store a single character. 
+
+        2. The character must be surrounded by single quotes, like 'A' or 'c':
+        
         ** Typically a single octet (one byte). This is an integer type.
     Syntax:
         char ch = 'a';
+        char ch = "a"; // Error
+              
 */
 
 int main()

@@ -2,14 +2,16 @@
 using namespace std;
 
 /*
-    sizeof() keyword:
-        It is a compile-time operator that determines the size, in bytes, of a variable or data type.
-        The sizeof operator can be used to get the size of classes, 
-        structures, unions and any other user defined data type.
+    sizeof() function:
+        1. It is a compile-time operator that determines the size, in bytes, of a variable or data type.
+
+        2. The sizeof operator can be used to get the size of classes, 
+            structures, unions and any other user defined data type.
 
         sizeof() also accepts defined variable. (see variable int_var)
         Syntax:
             sizeof (data type)
+            sizeof (variable)
 */
 
 int main()
@@ -24,5 +26,6 @@ int main()
 
     int int_var = 100;
     cout << "Size of int_var: " << sizeof(int_var) << endl;
+    
     return 0;
 }

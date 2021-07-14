@@ -12,22 +12,23 @@ using namespace std;
         Note: It is recommended to use descriptive names in order to create understandable and maintainable code:
     
     NOTICES:
-        he general rules for constructing names for variables (unique identifiers) are:
-        Names can contain letters, digits and underscores
-        Names must begin with a letter or an underscore (_)
-        Names are case sensitive (myVar and myvar are different variables)
-        Names cannot contain whitespaces or special characters like !, #, %, etc.
-        Reserved words (like C++ keywords, such as int) cannot be used as names
+        The general rules for constructing names for variables (unique identifiers) are:
+            1. Names can contain letters, digits and underscores
+            2. Names must begin with a letter or an underscore (_)
+            3. Names are case sensitive (myVar and myvar are different variables)
+            4. Names cannot contain whitespaces or special characters like !, #, %, etc.
+            5. Reserved words (like C++ keywords, such as int) cannot be used as names
 */
 
 int main()
 {
     // Good
-    int minutesPerHour = 60; // more descriptive nam
+    int minutesPerHour = 60; // more descriptive name
 
     // OK, but not so easy to understand what m actually is
     int m = 60;
     int _m = 60;
     // int 6m = 60; //can't start with numbers.
+    
     return 0;
 }

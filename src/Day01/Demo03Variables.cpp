@@ -4,9 +4,17 @@ using namespace std;
 
 /*
     Variables:
-		stored in main memory, (Random Access Memory RAM)
+		A variable is a memory location, with a name and a type, 
+		that stores different values in each moment of a program’s execution. 
 
-
+		Syntax:
+			variable:
+				int a;
+			value:
+				int a = 10;
+			address:
+				&a = 0xe01011
+				
 		Name of Variables (Identifiers):
 			1. avoid duplicated names
 			2. start with letter, or _
