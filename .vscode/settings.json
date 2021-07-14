@@ -2,7 +2,8 @@
   "files.associations": {
     "iostream": "cpp",
     "ostream": "cpp",
-    "array": "cpp"
+    "array": "cpp",
+    "string": "cpp"
   },
   "code-runner.runInTerminal": true
 }
