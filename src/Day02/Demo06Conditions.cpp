@@ -3,27 +3,31 @@
 using namespace std;
 
 /*
-    C++ Conditions:
-        A selection structure selects a statement or set of statements to execute on the basis of a condition. 
-        In this structure, statement or set of statements is executed when a particular condition 
-        is true and ignored when the condition is false. 
+    Selective Control/Condition Control in C++:
+        1. is a statement or set of statements to execute on the basis of a condition. 
+
+        2. statement or set of statements is executed when a particular condition 
+            is true and ignored when the condition is false. 
+        
         There are different types of selection structures in C++ like:
 ·         IF Statement
             Example, if score greater than 600, students can go IVY colleges
 ·         IF...ELSE Statement
 
-          if ... else if ... else if ... else ... statement
+          If ... else if ... else if ... else ... statement
             example:
                 The first batch of undergraduate, score > 600
                 The second batch of undergraduate, score > 500
                 The third batch of undergraduate, score > 400
-                else < 400
+                else < 400 
+          Nested if ... else statement
+
 ·         SWITCH Statement
 
 */
 int main()
 {
-    // condition and if statement
+    // Condition and if statement
     int score = 0;
     // cout << "Input the score: " << endl;
     // cin >> score;
@@ -35,7 +39,7 @@ int main()
     //     cout << "You can go IVY colleges." << endl;
     // }
 
-    //condition and if ... else ... statement
+    // Condition and if ... else ... statement
     // cout << "Input your score: ";
     // cin >> score;
     // cout << "Your score is: " << score << endl;
@@ -49,7 +53,7 @@ int main()
     //     cout << "You can go Community Colleges.";
     // }
 
-    // condition and if ...else if ... else if ... else ... statement
+    // Condition and if ...else if ... else if ... else ... statement
     // cout << "Input your score: ";
     // cin >> score;
     // cout << "Your score is: " << score << endl;
@@ -71,7 +75,7 @@ int main()
     //     cout << "You are intended to the community colleges. ";
     // }
 
-    // nested if ... if ... else if... else .... statement
+    // Nested if ... if ... else if... else .... statement
     cout << "Input your score: ";
     cin >> score;
     cout << "Your score is: " << score << endl;

@@ -22,8 +22,8 @@ int main()
     cout << !!x << endl; // !!x return true, b/c reversed false is true which is 1
 
     // && logical and
-    int m = 10;
-    int n = 15;
+    int m = 10; // m is true, non-zero
+    int n = 15; // n is true, non-zero
     cout << (m && n) << endl; // 1 true. because m and n are both true (1),
 
     m = 0;

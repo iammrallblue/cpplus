@@ -42,27 +42,35 @@ int main()
     cout << "The second pig is: " << pig_2 << " LBS" << endl;
     cout << "The third pig is: " << pig_3 << " LBS" << endl;
 
-
-    if (pig_1 > pig_2)
+    if (pig_1 == pig_2 == pig_3)
     {
-        if (pig_1 > pig_3)
-        {
-            cout << "The pig 1 is heaviest." << endl;
-        }
-        else
-        {
-            cout << "The pig 3 is heaviest." << endl;
-        }
+        cout << "Three pigs have same weight " << pig_1 << " LBS" << endl;
     }
     else
     {
-        if (pig_2 > pig_3)
+        if (pig_1 > pig_2)
         {
-            cout << "The pig 2 is heaviest." << endl;
+            if (pig_1 > pig_3)
+            {
+                cout << "The pig 1 is heaviest." << endl;
+            }
+            else
+            {
+                cout << "The pig 3 is heaviest." << endl;
+            }
         }
-        else {
-            cout << "The pig 3 is heaviest." << endl;
+        else
+        {
+            if (pig_2 > pig_3)
+            {
+                cout << "The pig 2 is heaviest." << endl;
+            }
+            else
+            {
+                cout << "The pig 3 is heaviest." << endl;
+            }
         }
     }
+
     return 0;
 }

@@ -48,8 +48,11 @@ int main()
     case 7:
         cout << "A good movie.";
         break;
+    case 6:
+        cout << "Normal movie.";
+        break;
     default:
-        cout << "Error, Input a number from 1 to 10. " << endl;
+        cout << "Bad Movie. " << endl;
         break;
     }
     return 0;

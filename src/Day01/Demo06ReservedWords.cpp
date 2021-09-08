@@ -11,7 +11,7 @@ using namespace std;
 	operator, template, this,
 
     Key points:
-        1. DO NOT use keyword as identifers, they are reserved in C++ Library 
+        1. DO NOT use keyword as identifiers, they are reserved in C++ Library 
 */
 
 int main()

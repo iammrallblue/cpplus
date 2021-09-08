@@ -24,11 +24,13 @@ int main()
 {
     // Good
     int minutesPerHour = 60; // more descriptive name
+    int _minutesPerHour = 60; // starts with underscore
 
     // OK, but not so easy to understand what m actually is
     int m = 60;
     int _m = 60;
     // int 6m = 60; //can't start with numbers.
     
+    cout << minutesPerHour << _minutesPerHour << endl;
     return 0;
 }

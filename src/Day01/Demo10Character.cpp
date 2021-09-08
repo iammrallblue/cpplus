@@ -29,6 +29,6 @@ int main()
 
     // convert a char to ASCII code
     char charVar = ',';
-    cout << ", ASCII code is: " << (int)charVar;
+    cout << "the ASCII code of a comma is: " << (int)charVar;
     return 0;
 }

@@ -10,8 +10,11 @@ using namespace std;
 		Syntax:
 			variable:
 				int a;
-			value:
-				int a = 10;
+
+				or 
+				
+			initial value:
+				int a = 10; 10 is initial value
 			address:
 				&a = 0xe01011
 				
