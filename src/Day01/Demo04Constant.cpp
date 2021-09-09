@@ -18,13 +18,21 @@ using namespace std;
                 #define Day 9
                 
                 #define macros constant is always defined on the header of cpp file.
-                
+                    it can use anywhere in the current cpp file
+
                 *** Macro names cannot be overloaded, 
                     and the macro preprocessor cannot handle recursive calls: ***
 
 
             4. const DAY 9;
-
+                    const is ONLY available within its scope
+                    
+                    fun1() {
+                        const VAR = 13;
+                    }
+                    fun2() {
+                        cout << VAR << endl; // ERROR. 
+                    }
 */
 
 int main()

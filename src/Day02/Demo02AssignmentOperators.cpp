@@ -29,22 +29,23 @@ int main()
 
     // +=, x = x + 2;
     x += 2;
-    cout << "x+=2: " << x << endl;
+    cout << "x+=2: " << x << endl; // 12
 
     // -=, x = x - 4;
     x -= 4;
-    cout << "x-=4: " << x << endl;
+    cout << "x-=4: " << x << endl; // 8
 
     // *=, x = x * 2;
     x *= 2;
-    cout << "x*=2: " << x << endl;
+    cout << "x*=2: " << x << endl; // 16
 
-    // /=, x = x / 4; 
-    x /= 5;
-    cout << "x/=2: " << x << endl;
+    // /=, x = x / 2;
+    x /= 4;
+    cout << "x/=4: " << x << endl; // 4
 
-    // %=, x = x % 2; 
-    x %= 2;
-    cout << "x%=2: " << x << endl;
+    // %=, x = x % 2;
+    x %= 3;
+    cout << "x%=2: " << x << endl; // 0
+
     return 0;
 }

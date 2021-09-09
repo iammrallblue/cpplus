@@ -29,7 +29,8 @@ int main()
     cout << "%d + %d = (&x, &y)" << x + y << endl;
     cout << x - y << endl;
     cout << x * y << endl;
-    cout << x / y << endl; // 0, x and y are int
+    cout << x / y << endl;                                                               // 0, x and y are int
+    cout << "keep all digits of two integers' sum: " << double((double)20 / 30) << endl; // keep all digits
 
     // % Modulus
     int m = 10;
@@ -48,15 +49,15 @@ int main()
 
     // pre-increment
     // ++x;
-    // cout << "++x is: " << x << endl; // 11
-    // int z = ++x * 10; // ++x is 12, 12 * 10 = 120
-    // cout << "z = " << z << endl; // 120
+    // cout << "++x is: " << x << endl; // increment before print out 11
+    // int z = ++x * 10;                // ++x is 12, 12 * 10 = 120
+    // cout << "z = " << z << endl;     // 120
 
     // post-increment
-    x++;
+    x++; // x = x + 1;
     cout << "x++ is: " << x << endl; // 11
 
-    int z = x++ * 10;   // x++ is still 11, 11 * 10 = 110
+    int z = x++ * 10;            // x++ is still 11, 11 * 10 = 110
     cout << "z = " << z << endl; // 110
     return 0;
 }

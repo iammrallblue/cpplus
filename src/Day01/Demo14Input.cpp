@@ -4,7 +4,7 @@
 using namespace std;
 
 /*
-    How to input those data types:
+    How to input those data types by cin function from <iostream>
         1. Integer
             int x = 0;
 
@@ -17,7 +17,7 @@ int main()
 {
     // 1. Integer
     int x = 0;
-    cout << "Input a number for assigning value to variable x: " << endl;
+    cout << "Input a value for variable x: " << endl;
     cin >> x;
     cout << "The input number " << x << " is assigned to x." << endl;
 
@@ -39,5 +39,5 @@ int main()
     cin >> str;
     cout << "The input string is: " << str << endl;
 
-    return 0;
+    return EXIT_SUCCESS;
 }

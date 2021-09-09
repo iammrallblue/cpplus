@@ -1,5 +1,5 @@
 #include <iostream>
-//#include <string> // when using C++ style string, import <string>
+#include <string> // when using C++ style string, import <string>
 
 using namespace std;
 
@@ -20,11 +20,11 @@ using namespace std;
 int main()
 {
     // C style
-    char str[] = "Hello, World!"; // str is an array
-    cout << str << endl;
+    char str[] = "Hello, C style string."; // str is an array
+    cout << str[0] << endl;
 
     // C++ style import <string> before using this style
-    string str_value = "Hello, World!!!";
+    string str_value = "cpp style string.";
     cout << str_value << endl;
 
     // C++ String Concatenation (Mehtod 1)
