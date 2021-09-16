@@ -12,6 +12,8 @@ using namespace std;
     Syntax:
         char ch = 'a';
         char ch = "a"; // Error
+
+        char16_t ch16 = 
               
 */
 
@@ -29,6 +31,15 @@ int main()
 
     // convert a char to ASCII code
     char charVar = ',';
-    cout << "the ASCII code of a comma is: " << (int)charVar;
+    cout << "the ASCII code of a comma is: " << (int)charVar << endl;
+
+    char ch_x = 'a';
+    cout << "a= " << (int)ch_x << endl; // 97
+
+    char ch_y = 'A';
+    cout << "A= " << (int)ch_y << endl; // 65
+
+    char ch_z = '1';
+    cout << "1= " << (int)ch_z << endl; // 49
     return 0;
 }

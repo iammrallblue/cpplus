@@ -27,7 +27,7 @@ using namespace std;
 */
 int main()
 {
-    // Condition and if statement
+    // 1. Condition and single if statement
     int score = 0;
     // cout << "Input the score: " << endl;
     // cin >> score;
@@ -39,7 +39,7 @@ int main()
     //     cout << "You can go IVY colleges." << endl;
     // }
 
-    // Condition and if ... else ... statement
+    // 1. Condition and if ... else ... statement
     // cout << "Input your score: ";
     // cin >> score;
     // cout << "Your score is: " << score << endl;
@@ -53,7 +53,21 @@ int main()
     //     cout << "You can go Community Colleges.";
     // }
 
-    // Condition and if ...else if ... else if ... else ... statement
+    // 2. Condition and if ... else ... statement
+    // int num;
+    // cout << "Input a number: " << endl;
+    // cin >> num;
+
+    // if (num >= 0)
+    // {
+    //     cout << num << " is a positive number.";
+    // }
+    // else
+    // {
+    //     cout << num << " is a negative number.";
+    // }
+
+    // 1. Condition and if ...else if ... else if ... else ... statement
     // cout << "Input your score: ";
     // cin >> score;
     // cout << "Your score is: " << score << endl;
@@ -75,34 +89,53 @@ int main()
     //     cout << "You are intended to the community colleges. ";
     // }
 
-    // Nested if ... if ... else if... else .... statement
-    cout << "Input your score: ";
-    cin >> score;
-    cout << "Your score is: " << score << endl;
+    // 2. Condition and if ...else if ... else if ... else ... statement
+    // int num;
+    // cout << "input a number: " << endl;
+    // cin >> num;
 
-    if (score >= 600)
-    {
-        cout << "You can go the first batch undergraduate." << endl;
-        if (score >= 700)
-        {
-            cout << "You can go studying aboard MIT." << endl;
-        }
-        else if (score >= 650)
-        {
-            cout << "You can go studying aboard Harvard." << endl;
-        }
-    }
-    else if (score >= 500)
-    {
-        cout << "You can go the second batch undergraduate." << endl;
-    }
-    else if (score >= 400)
-    {
-        cout << "You can go the third batch undergraduate." << endl;
-    }
-    else
-    {
-        cout << "You can go the community colleges." << endl;
-    }
+    // if (num > 0)
+    // {
+    //     cout << num << " is a positive number." << endl;
+    // }
+    // else if (num < 0)
+    // {
+    //     cout << num << " is a negative number." << endl;
+    // }
+    // else
+    // {
+    //     cout << num << " is zero." << endl;
+    // }
+
+
+    // 1. Nested if ... if ... else if... else .... statement
+    // cout << "Input your score: ";
+    // cin >> score;
+    // cout << "Your score is: " << score << endl;
+
+    // if (score >= 600)
+    // {
+    //     cout << "You can go the first batch undergraduate." << endl;
+    //     if (score >= 700)
+    //     {
+    //         cout << "You can go studying aboard MIT." << endl;
+    //     }
+    //     else if (score >= 650)
+    //     {
+    //         cout << "You can go studying aboard Harvard." << endl;
+    //     }
+    // }
+    // else if (score >= 500)
+    // {
+    //     cout << "You can go the second batch undergraduate." << endl;
+    // }
+    // else if (score >= 400)
+    // {
+    //     cout << "You can go the third batch undergraduate." << endl;
+    // }
+    // else
+    // {
+    //     cout << "You can go the community colleges." << endl;
+    // }
     return 0;
 }

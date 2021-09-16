@@ -24,13 +24,13 @@ int main()
     // && logical and
     int m = 10; // m is true, non-zero
     int n = 15; // n is true, non-zero
-    cout << (m && n) << endl; // 1 true. because m and n are both true (1),
+    cout << "(m && n) m and n are both non-zero:  " << (m && n) << endl; // 1 true. because m and n are both true (1), 1 ^ 1 is 1
 
     m = 0;
-    cout << (m && n) << endl; // 0 false, because m is 0 which is false.
+    cout << "(m && n) one of m and n is zero: " << (m && n) << endl; // 0 false, because m is 0 which is false. 0 ^ 1 is 0
 
     n = 0;
-    cout << (m && n) << endl; // 0 false, because m and n are 0, which is false.
+    cout << (m && n) << endl; // 0 false, because m and n are 0, which is false. 1 ^ 0 is 0
 
     // || logical or
     int a = 10;
