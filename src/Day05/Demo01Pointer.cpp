@@ -53,5 +53,23 @@ int main()
     cout << "Changing value of x by *p (dereference), x = " << x << endl;   // value of variable x
     cout << "*p = " << *p << endl; // value of variable x
     cout << "p = " << p << endl;   // the address of variable x.
+
+    int n =1;
+    int &m = n;  //Declare an int type reference name q, which is an alias of variable n
+
+    cout << "n= " << n << endl; // print out the values of int variable n
+    cout << "&m= " << &m << endl; // print out the address of int variable n
+
+    // declare an Array
+    int a[3];
+    int *xx = a;
+    int *yy = xx + 2;
+    cout << "xx= " << xx << endl;
+    cout << "yy= " << yy << endl;
+    cout << "*xx= " << *xx << endl;
+
+    // Dynamic allocation of pointers-dynamic allocation of arrays
+    int *pnt = new int[3];
+    
     return 0;
 }
