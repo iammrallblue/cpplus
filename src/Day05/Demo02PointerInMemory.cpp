@@ -21,6 +21,6 @@ int main()
     // x86 x64 have different memory space.
     cout << "size of (int *): " << sizeof(int *) << endl; // 8
     cout << "size of pointer *p: " << sizeof(*p) << endl; // 4
-    cout << "size of (double *): " << sizeof(double *) << endl;
+    cout << "size of (double *): " << sizeof(double *) << endl; // 8
     return 0;
 }

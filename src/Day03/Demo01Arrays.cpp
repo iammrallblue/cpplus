@@ -44,6 +44,7 @@ int main()
     cout << endl;
     // third form of array
     int my_array3[] = {1, 2, 3, 4, 5, 10, 20, 30, 40};
+    // int my_array3[] {1, 2, 3, 4, 5, 10, 20, 30, 40}; // equals to above
 
     // using with sizeof()
     // find out size of array in memory:

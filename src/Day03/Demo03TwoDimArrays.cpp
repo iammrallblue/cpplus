@@ -1,4 +1,6 @@
 #include <iostream>
+#define WIDTH 5
+#define HEIGHT 3
 
 using namespace std;
 
@@ -75,7 +77,20 @@ int main()
         {
             cout << my_array4[i][j] << " ";
         }
-        cout << endl;  
+        cout << endl;
     }
+
+    // example of multi-Dem Array
+    int demArray[HEIGHT][WIDTH];
+    int x;
+    int y;
+    for (x = 0; x < HEIGHT; x++)
+    {
+        for (y = 0; y < WIDTH; y++)
+        {
+            demArray[x][y] = (x + 1) * (y + 1);
+        } // inner for
+    }     // outer for
+    cout << demArray[x][y] << endl;
     return 0;
 }
