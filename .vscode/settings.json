@@ -3,11 +3,13 @@
     "iostream": "cpp",
     "ostream": "cpp",
     "array": "cpp",
-    "string": "cpp"
+    "string": "cpp",
+    "bitset": "cpp"
   },
   "code-runner.runInTerminal": true,
   "cSpell.words": [
     "alignas",
-    "myvar"
+    "myvar",
+    "vect"
   ]
 }
