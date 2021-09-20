@@ -3,10 +3,8 @@
 using namespace std;
 
 /*
-
-	Sep. 09
 	Functions in c++:
-		no needed defining inside classes
+		1. No needed defining inside classes
 
 	bash:
 		echo $?
