@@ -50,12 +50,12 @@ int main()
 
     // Indirection (Dereference) change value of variable x by pointer *p
     *p = 2333;
-    cout << "Changing value of x by *p (dereference), x = " << x << endl;   // value of variable x
+    cout << "Changing value of variable x by *p (dereference), x = " << x << endl;   // value of variable x
     cout << "*p = " << *p << endl; // value of variable x
     cout << "p = " << p << endl;   // the address of variable x.
 
     int n =1;
-    int &m = n;  //Declare an int type reference name q, which is an alias of variable n
+    int &m = n;  //Declare an int type reference name m, which is an alias of variable n
 
     cout << "n= " << n << endl; // print out the values of int variable n
     cout << "&m= " << &m << endl; // print out the address of int variable n
