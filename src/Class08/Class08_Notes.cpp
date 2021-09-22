@@ -1,20 +1,37 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
 /*
 	Functions in c++:
-		1. No needed defining inside classes
+		1. A group of statements that has a given name, can be called at point of code.
+		2. No needed defining inside classes
+		3. Syntax:
+			type func_name(param1,param2,...)
+			{
+				// statements
+			}
+		4. Ex.
+			int addFunc(int x, int y)
+			{
+				return x + y; // a function can have a return value.
+			}
+		5. the return value of main() function:
+			return EXIT_SUCCESS; // same as return a 0
+		
+		6. Pass by value:
+			See add() function
 
+		7. Pass by reference:
+			See void duplicate() Function
+			int & a;
+			a* = 2;
+			
+		8. Ranged For Loop & Pass by Reference
 	bash:
 		echo $?
 		will return 1.
-
-	pass by reference (pointers)
-
-		int & a;
-
-		a* = 2;
 
 makefile:
 	NAME = func
@@ -49,7 +66,7 @@ func.cpp
 
 	overloaded functions()
 
-		same funciton name, different parameters
+		same function name, different parameters
 		same function name , different parameter list (the number of parameter)
 		
 	default values in function parameters:
@@ -82,58 +99,60 @@ func.cpp
 
 */
 
+// example for pass by value
+int add(int x, int y)
+{
+	int z = x + y;
+	return z;
+} // add
 
-void duplicate(int& a)
+// example for pass by reference
+void duplicate(int &a, int &b, int &c)
 {
 	a *= 2;
-}
-int main(){
-
-	int x = 5;
-	duplicate(x); // if a literal value  such as 22 will be an error
-	cout << "x = " x << endl;
-
-	return EXIT_SUCESS;
-}// main
-
-
-
-#include <iostream>
-#include <string>
-
-using namespace std;
-
-void duplicate(int& a)
-{
-	a *= 2;
+	b *= 3;
+	c *= 4;
 } // duplicate
 
-
-string concat(string a, string b) {
-// string concat(string& a, string& b)
-// string concat(const string& a, const string&, b) // compiling error
+// concat() function
+string concat(string a, string b)
+{
+	// string concat(string& a, string& b)
+	// string concat(const string& a, const string&, b) // compiling error
 
 	// modidying for concat() function:
-	a.erase(0,1);
-	b.erase(1,3);
+	a.erase(0, 1);
+	b.erase(1, 3);
 	cout << "Inside of concat(): " << endl;
 	cout << "a = " << a << endl;
 	cout << "b = " << b << endl;
 	return a + b;
 } //concat
 
+int main()
+{
+	// calli add() function to pass value to it
+	int result = add(1, 2);
+	cout << "x + y: " << result;
 
-int main(){
-
+	// call duplicate() function by passing reference
 	int x = 5;
-	duplicate(x); // if a literal value  such as 22 will be an error
-	cout << "x = " x << endl;
+	int y = 6;
+	int z = 7;
+	duplicate(x, y, z); // if a literal value  such as 22 will be an error
+	cout << "x = " << x << endl;
+	cout << "y = " << y << endl;
+	cout << "z = " << z << endl;
 
-	stirng x = "xyz";
-	stirng y = "hellp";
+	string str_x = "xyz";
+	string str_y = "hellp";
 
 	cout << "Before calling concat() function: " << endl;
-	cout << "x = " << x << enc
+	cout << "str_x = " << str_x << endl;
+	cout << "str_y = " << str_y << endl;
 
-	return EXIT_SUCESS;
-}// main
+	cout << "After calling concat() function: " << endl;
+	// call concat() function
+	concat(str_x, str_y);
+	return EXIT_SUCCESS;
+} // main
