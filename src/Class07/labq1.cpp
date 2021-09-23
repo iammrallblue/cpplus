@@ -28,15 +28,15 @@ int main()
 
     int number = 0;
 
-    // iterate elements from the string str_line by eachfor 
-    for (auto x : str_line)
+    // iterate elements from the string str_line by eachfor
+    for (auto &x : str_line)
     {
         // check all elements by xor operator
-        number ^= x - '0';
+        number ^= ((int)x - 48);
     } // for
 
-    cout << "The exclusive number is: " << number << endl;;
+    cout << "The exclusive number is: " << number << endl;
+    ;
 
     return EXIT_SUCCESS;
 } // main
-
