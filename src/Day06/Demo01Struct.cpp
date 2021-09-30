@@ -27,7 +27,7 @@ using namespace std;
             struct structure_name  
             {  
                 // member declarations.  
-            }  
+            };  
 
 */
 
