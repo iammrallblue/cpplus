@@ -4,16 +4,16 @@ using namespace std;
 
 /*
     Functions:
-        A function is a block of code which only runs when it is called.
-        A function is an entity designed to do a task
-        You can pass data, known as parameters, into a function.
-        Functions are used to perform certain actions, 
-        and they are important for reusing code: Define the code once, and use it many times.
+        1. A function is a block of code which only runs when it is called.
+        2. A function is an entity designed to do a task
+        3. You can pass data, known as parameters, into a function.
+        4. Functions are used to perform certain actions, 
+        5. and they are important for reusing code: Define the code once, and use it many times.
 
         Syntax:
             void myFunction(int x, int y) {}  // x, y are parameters 
 
-        // call myFunction(1,2) // 1,2 are arguments
+            // call myFunction(1,2) // 1,2 are arguments
 
             A parameter is a variable declared in the header of the function definition; 
             an argument is a value that initializes the parameter when the function is called.
@@ -54,8 +54,12 @@ void exchangeNumber(int m, int n)
 
 int main()
 {
-    cout << myFunction(1, 2) << endl; // 1 and 2 are arguments
+    // call myFunction, give arguments
+    int result = myFunction(4,5);
+    cout << result << endl; // 1 and 2 are arguments
 
+    // call exchangNumber function , give arguments
     exchangeNumber(99, 33);
-    return 0;
+
+    return EXIT_SUCCESS;
 }
