@@ -6,13 +6,17 @@ using namespace std;
 /*
     C++ Arrays
         ONE-DIMENSIONAL ARRAYS
-        Arrays are used to store multiple values in a single variable, 
-        instead of declaring separate variables for each value.
+            Arrays are used to store multiple values in a single variable, 
+            instead of declaring separate variables for each value.
         
-        To declare an array, define the variable type, (three forms of array)
-        specify the name of the array followed by square brackets and specify the number of elements.   
+            To declare an array, define the variable type, (three forms of array)
+            specify the name of the array followed by square brackets and specify the number of elements.   
 
-        The compiler allocates memory locations for the array when it is declared.
+            The compiler allocates memory locations for the array when it is declared.
+
+        Key points:
+            1. An array is a collection of elements of the same type 
+                placed in contiguous memory locations
 
         Array example:
             to find the max value in an array:
