@@ -101,7 +101,7 @@ Class 03
 	such that #include <iostream> tells preprocessor to include
 	header file <iostream> for input/ouput operations
 */
-using namespace std;
+using namespace std; // using directive
 /*
 	import elements which will be used in codes.
 		Ex. cout is from std, therefore,

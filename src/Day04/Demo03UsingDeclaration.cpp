@@ -7,12 +7,12 @@ using namespace std;
     
         Declaration and Definition are separated.
         Key point:
-            1. put the function declaration before the function call.
+            1. put the prototype of a function before the function call.
             2. then the function definition after the function call.
             3. A semicolon is needed at the end of a function declaration.
 */
 
-// Function Declaration
+// The Prototype of a function 
 int maxFunction(int x, int y); // it is similar with initializing a variable.
 
 int main()
