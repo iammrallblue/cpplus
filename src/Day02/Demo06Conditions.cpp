@@ -31,7 +31,6 @@ int main()
     int score = 0;
     // cout << "Input the score: " << endl;
     // cin >> score;
-
     // cout << "your score is: " << score << endl;
 
     // if (score >= 600)
