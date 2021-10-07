@@ -105,7 +105,7 @@ using namespace std; // using directive
 /*
 	import elements which will be used in codes.
 		Ex. cout is from std, therefore,
-			using namespace std; statement is necessary 
+			using namespace std; this statement is necessary 
 */
 
 /*
