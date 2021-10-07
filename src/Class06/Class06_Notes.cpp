@@ -100,7 +100,27 @@
 
                         a decimal point, an e character or 
                         both a decimal point and an e character:
-                            Ex.
+                            Ex.aration of Variables in C++:
+        1. C++ is a strongly-typed language, variables MUST to be declared
+            with its type before its first use.
+
+        2. this informs the compiler the size of reserve in memory for the
+            variable and how to interpret its value.
+        
+        3. Syntax:
+                int a;
+                float num;
+                string str;
+
+        4. variables can be declarated together (NOT RECOMMENDED)
+            int a, b, c;
+                this declares three variables (a,b, and ), same type of int.
+         
+	Initialization of Variables in C++:
+
+        Three ways to initialize variables:
+            C-like initialization:
+                type identifier(vari
                                 3.14159L  // 3.14159 
                                 6.02e23f // 6.02 x 10^23 
                                 1.6e-19 // 1.6 x 10^-19 
