@@ -23,7 +23,7 @@ struct Teatcher
     int id;
     string name;
     int age;
-    // declare a student structure in another structure
+    // declare a student structure inside of another structure
     struct Student stu_1;
 };
 
@@ -31,7 +31,7 @@ int main()
 {
     // a Teatcher structure instance
     struct Teatcher ter;
-    ter.id = 1000; 
+    ter.id = 1000;
     ter.name = "Abby";
     ter.age = 47;
     // invoke Strudent structure
@@ -46,6 +46,10 @@ int main()
     cout << "Name: " << ter.stu_1.name << endl;
     cout << "Age: " << ter.stu_1.age << endl;
     cout << "Score: " << ter.stu_1.score << endl;
+
+    // Student struct size
+    cout << "The size of Student struct is: " << sizeof(ter.stu_1) << endl;
+    cout << "string name is: " << sizeof(ter.stu_1.name);
 
     return 0;
 }
