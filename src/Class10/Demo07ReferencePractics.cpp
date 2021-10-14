@@ -43,8 +43,6 @@ int main(int argc, char const *argv[])
 
 // int main(int argc, char const *argv[])
 // {
-//     char *str1 = "Bella";
-//     char *str2 = "Abby";
 //     swap(str1, str2);
 //     cout << "str1= " << str1 << endl;
 //     cout << "str2= " << str2 << endl;
