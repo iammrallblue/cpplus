@@ -4,17 +4,17 @@
 
 using namespace std;
 /*
-    References in C++:
+    Reference Variable in C++:
         Def'n:
             A variable can be defined as a reference,
-            An alternative name of thevariable
+            An alternative name of the variable.
         
         Key points: (diffs of Reference and Pointer)
             1. DON'T exist a "null reference", 
                 Reference needs to be initialized and 
                 pointed to a existed the address in memory.
                 * Pointer can be a null, nullptr, 0;
-            2. Reference cannot be assigned twice. (Cannot be re-assigned.)
+            2. Reference cannot be assigned twice. (Cannot be re-assigned or reset.)
                 * Pointer can be re-pointed to.
             3. Reference needs to be initialized at when declared.
                 * Pointer can be initialized at any points.
@@ -26,6 +26,11 @@ using namespace std;
                     (see printInfo() function)
                 If we pass it without reference, a new copy of it is 
                 created which causes wastage of CPU time and memory.
+            6. Declaration of Reference variable is preceded with ‘&’symbol 
+                ( but DO NOT READ IT as “address of”).
+            7.A copy constructor argument where pointer cannot be used. 
+                Reference must be used to pass the argument in the copy constructor. 
+                Similarly, references must be used for overloading some operators like ++.
 
         Examples:
             1. A reference pointed to a variable x,
@@ -80,11 +85,12 @@ int main(int argc, char const *argv[])
     // Using a reference
     int x = 100;
 
-    int &ref = x; // get the address of variable x
+    int &ref = x; // why we can't call &ref , the address of x??
     // same as: &x
 
     cout << "The value of &ref is: " << &ref << " \n and The value of &x is: " << &x << endl; // the address 0x7ffeed0f21dc
     cout << "The size of &ref is: " << sizeof(&ref) << endl;                                  // 8 bytes.
+    // cout << "The type of &ref is: " << typeid(&ref) << endl;
 
     cout << "The value of ref is: " << ref << endl;        // 100, ref = the value of x.
     cout << "The size of ref is: " << sizeof(ref) << endl; // 4 bytes
@@ -123,7 +129,6 @@ int main(int argc, char const *argv[])
     {
         cout << i << " "; // {12,22,32,42,52,62}
     }
-
 
     /* VSCODE -> Run Build Task. */
     // 5. For Each Loop to avoid the copy of objects
