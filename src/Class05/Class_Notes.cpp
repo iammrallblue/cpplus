@@ -1,9 +1,53 @@
 #include <iostream>
 #include <cstdlib>
 #include <bitset>
+#include <climits>
+#include <limits>
 
 using namespace std;
 /*
+    Signed Integers:
+        The max value of singed int: (the first number is 0 "-") 
+            -2147483647 ~ 2147483647
+                0 111 1111 1111 1111 1111 1111 1111 1111 = the max value - 1
+        (原碼)O'sC 1111 1111 1111 1111 1111 1111 1111 1111 = -2147483647
+        (反碼)T'sC 1000 0000 0000 0000 0000 0000 0000 0000
+        (補碼)     1000 0000 0000 0000 0000 0000 0000 0001
+
+        Example: +15 and -15, +0 and -0, +100 and -100
+            Binary: 二進制原碼
+                最高位為符號位，“0”表示整數，“1”表示負數，其餘位數表示數值的大小。  
+                (+15) 0000 1111
+                (-15) 1000 1111
+                (+0) 0000 0000
+                (-0) 1000 0000
+                (+100) 0110 0100
+                (-100) 1110 0100
+                    
+            One's Complement: 二進制反碼 
+                (It's more like temporary code for Two's Complement)
+                正數的反碼與其原碼相同， 負數的反碼是對其原碼的逐位取反，但符號位除外
+                (+15)的反碼: 0000 1111
+                (-15)的反碼: 1111 0000
+                (+0)的反碼: 0000 0000
+                (-0)的反碼: 1111 1111
+                (+100)的反碼: 0110 0100
+                (-100)的反碼: 1001 1011
+
+            Two's Complement: 二進制補碼
+                正數的補碼與其原碼相同，負數的補碼是對其原碼逐位取反並加1，但符號位除外。
+                (+15)的補碼: 0000 1111
+                (-15)的補碼: 1111 0000 
+                                    1 (反碼加 1)
+                            1111 0001
+                (+0)的補碼: 0000 0000
+                (-0)的補碼: 1111 1111
+                                   1 (反碼加 1)
+                           1111 1110
+                (+100)的補碼: 0110 0100
+                (-100)的補碼: 1001 1011
+                                     1(反碼加 1)
+                             1001 0000
 	Bitwise Operators:
 		& AND 	(Bitwise AND),
 		| OR  	(Bitwise OR), 
@@ -158,7 +202,11 @@ using namespace std;
 */
 int main()
 {
-    /*
+    size_t my_int = 333;
+    typedef string self_defined_string;
+    self_defined_string my_str = "self defined string.";
+
+    /*π
         Left shift code example:
             Decimal         Binary
                 4           0b0000'0100
@@ -233,6 +281,34 @@ int main()
     b = ~b;
     cout << "After negating b is: " << (short)b << endl;
     cout << "After shifting 8 bits of 4: " << bitset<8>(b) << endl;
+
+    /*
+        -1
+        Binary: 1000 0001
+        1'sCmt: 1111 1110
+        2'sCmt: 1111 1110
+                        1
+        2'sCmt: 1111 1111
+
+        -1 >> 3
+        2'sCmt: 1111 1111
+        -1 is right shift 3, 
+        the 2'sCmt is still 1111 1111
+        therefore, -1 is still -1
+    */
+    cout << "-1 >> 3: " << (-1 >> 3) << endl; // -1
+
+    int num = 32768;
+    cout << num << " >> 1 is: " << (num >> 1) << endl;
+    cout << num << " >> 2 is: " << (num >> 2) << endl;
+    cout << (num << 1) << endl;
+    signed int m = -5;
+    // cout << m << " >> 2 is: " << (m >> 2) << endl;
+    // cout << m << " << 2 is: " << (m << 2) << endl;
+    bitset<8> eight_bits(m);
+    bitset<4> four_bits(m);
+    cout << m << " in 8 bits: " << eight_bits << endl;
+    cout << m << " in 4 bits: " << four_bits << endl;
 
     return EXIT_SUCCESS;
 }

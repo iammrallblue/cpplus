@@ -31,7 +31,7 @@
       "type": "cppdbg",
       "request": "launch",
       "program": "${fileDirname}/${fileBasenameNoExtension}",
-      "args": [],
+      "args": ["-Wall","-Werror","-pedantic-errors","-std=c++17"],
       "stopAtEntry": true,
       "cwd": "${workspaceFolder}",
       "environment": [],

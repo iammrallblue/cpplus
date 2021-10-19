@@ -23,7 +23,7 @@ Class 03
 		- Syntax:
 			#include <string>
 			#include <iostream>
-			#define T 20;??
+			#define T 20;
 			using namespace std;
 		- C and C++ takes much longer to compile than Java 
 			b/c include statements require a great deal of parsing(解析)

@@ -243,14 +243,78 @@ using namespace std;
                 By using "const", to the value to read-only, which means not 
                 to modify it.
 
-
-
-
+                1. Pointer points to a const-modified variable (see code)
+                    Syntax:
+                        const double * double_ptr;
+                        or
+                        double const * double_ptr; 
+                        *** cannot use *double_ptr to modidy the value of the pointed address.
+                            but can access their values
+                2. const Pointer:
+                    Syntax:
+                        int * const int_ptr;
+                3. const Pointer points to a const-modified variable 
+                    Syntax:
+                        const int *const int_ptr;
 */
 
 int main(int argc, char const *argv[])
 {
     // array<int, 3> myArr = {1, 2, 3};
 
+    // Pointer pointes to a const-modified variable
+    const int x = 78; // both x and y are const, cannot change
+    const int y = 25;
+    int z = 44;
+
+    // declare a pointer pointing to x
+    const int *x_ptr = &x;
+    // "const int" const works on int not pointer,
+    // b/c pointer is pointed to a const-modified varialbe
+    cout << "*x_ptr is: " << *x_ptr << endl; // 78
+    // *x_ptr = 99; // error,  x is a const variable
+
+    // Pointer x_ptr can point to another address
+    x_ptr = &y;
+    cout << "*x_ptr is: " << *x_ptr << endl; // 25
+
+    // Pointer x_ptr can point to the address of a non const variable
+    x_ptr = &z;
+    cout << "*x_ptr is: " << *x_ptr << endl; // 44
+    // *x_ptr = 22; // error, pointer x_ptr is defined for a const variable
+
+    // const Pointer
+    int m;
+    int n = 20;
+    int *const int_ptr = &m;
+    // int *const int_ptr; // error
+    // *int_ptr = &m;
+    int *ptr_1;
+
+    // const Pointer when it is pointed to an address,
+    //it cannot not re-pointed again
+    *int_ptr = 1000;
+    cout << "*int_ptr is: " << *int_ptr << endl; // 1000
+    cout << "m is: " << m << endl;               // 1000
+
+    // *int_ptr can modify the value of the variable
+    *int_ptr = 1;
+    cout << "*int_ptr is: " << *int_ptr << endl; // 1000
+
+    // *int_ptr cannot point to another address
+    // int_ptr = &n; // variable 'int_ptr' declared const here
+
+    // 3. const Pointer points to a const-modified variable
+    int a = 8;
+    int b = 10;
+    const int *const a_ptr = &a;
+    cout << "a is: " << a << endl; // 8
+    cout << "&a is: " << &a << endl; // 0x7ffeef1df1bc
+    cout << "a_ptr is: " << a_ptr << endl; // 0x7ffeef1df1bc
+    cout << "*a_ptr is: " << *a_ptr << endl; // 8
+
+    // a_ptr = &b; // a const pointer cannot re-points again
+    *a_ptr = b; // pointer is pointed to a const variable
+    // read-only variable is not assignable
     return EXIT_SUCCESS;
 }

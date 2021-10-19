@@ -1,0 +1,24 @@
+CC = g++
+DEBUG = -g
+CFLAGS = -Wall -pedantic-errors -c $(DEBUG)
+LFLAGS = -Wall -pedantic-errors $(DEBUG)
+
+compile: main.o hello.o factorial.o
+	$(CC) $(LFLAGS) -o hello main.o hello.o factorial.o
+
+main.o: main.cpp functions.h
+	$(CC) $(CFLAGS) main.cpp
+
+hello.o: hello.cpp functions.h
+	$(CC) $(CFLAGS) hello.cpp
+
+factorial.o: factorial.cpp functions.h
+	$(CC) $(CFLAGS) factorial.cpp
+
+run: compile
+	./hello
+
+clean:
+	rm -f hello
+	rm -f *.o
+

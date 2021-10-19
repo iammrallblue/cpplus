@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-#define DAY 7;
+#define DAY 7; // macros
 
 /*
     Constants:
