@@ -7,7 +7,7 @@
 using namespace std;
 
 typedef unsigned int uint;
-typedef initializer_list<initializer_list<double>> i_list;
+typedef initializer_list<initializer_list<double> > i_list;
 
 class Matrix
 {
