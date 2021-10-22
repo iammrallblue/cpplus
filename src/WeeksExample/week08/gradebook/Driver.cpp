@@ -11,7 +11,7 @@ int main()
 	cout << gb1.getCourseName() << endl;
 	//cout << gb1.courseName << endl; // cannot directly access private data member
 	
-	GradeBook gb1c = gb1; // invokes the implicitly copy constructor
+	GradeBook gb1c = gb1; // invokes the implicity copy constructor
 	gb1.displayMessage();
 	gb1c.displayMessage();
 

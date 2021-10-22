@@ -8,14 +8,13 @@ int global_array[5];
 int main()
 {
 	// local array's elements are NOT default initialized
-	const int n = 5;
-	int array[n];
-	for (int i = 0; i < n * 2; i++)
-	{
+	const int n = 5;	
+	int array [n];
+	for (int i = 0; i < n*2; i++) {
 		cout << "array[" << i << "] = " << array[i] << endl;
 	} // for
 
-	/*
+/*
 	for (int i = 0; i < 5; i++) {
 		cout << "global_array[" << i << "] = " << global_array[i] << endl;
 	} // for
