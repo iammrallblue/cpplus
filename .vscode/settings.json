@@ -74,7 +74,10 @@
     "*.tcc": "cpp",
     "memory_resource": "cpp",
     "stop_token": "cpp",
-    "cinttypes": "cpp"
+    "cinttypes": "cpp",
+    "stdlib.h": "c",
+    "filesystem": "cpp",
+    "fcntl.h": "c"
   },
   "code-runner.runInTerminal": true,
   "cSpell.words": [
