@@ -4,7 +4,7 @@
 #include <fcntl.h>
 #include <sys/types.h>
 #include <sys/stat.h>
-
+#include <unistd.h>
 
 #define MAX_BUF_SIZE 512
 
@@ -43,7 +43,8 @@ int main()
     fclose(fp);
 
     return (0);
-}
+    
+} // main
 
 int main()
 {
@@ -59,10 +60,13 @@ int main()
             break;
         }
         printf("%c", c);
-    }
+
+    } // while
     fclose(fp);
+
     return (0);
-}
+
+} // main
 
 int main(int argc, char **argv)
 {
@@ -71,12 +75,16 @@ int main(int argc, char **argv)
     char buf[MAX_BUF_SIZE];
 
     if (argc < 2)
+    {
         fprintf(stderr, "Usage: a.out filename\n");
+    }
     else
     {
         fd = open(argv[1], O_RDONLY);
         if (fd < 0)
+        {
             fprintf(stderr, "Error In Opening File\n");
+        }
         else
         {
             fprintf(stdout, "Enter No of bytes to read from file %s\n", argv[1]);
@@ -87,19 +95,28 @@ int main(int argc, char **argv)
             buf[count] = '\0';
 
             if (count <= 0)
+            {
                 fprintf(stderr, "Error In Reading from file\n");
+            }
             else if (count < value)
+            {
                 fprintf(stdout, "Partial read data is %s\n", buf);
+            }
             else if (count == value)
+            {
                 fprintf(stdout, "Data is: \n%s\n", buf);
+            }
             else
+            {
                 fprintf(stderr, "Error in read.");
+            }
 
             close(fd);
         }
     }
     return 0;
-}
+
+} // main
 
 /*
 System Calls for Low-Level File I/O
@@ -159,9 +176,8 @@ Sample Program
 #include <stdlib.h>
 #include <unistd.h>
 
-    /* Prototypes. */
-    void
-    pdie(const char *);
+/* Prototypes. */
+void pdie(const char *);
 void die(const char *);
 
 #define BUFFER_SIZE 1024 /* Size of the read/write buffer. */
@@ -187,12 +203,16 @@ int main(int argc, char *argv[])
 
     /* Open file to be copied. */
     if ((rfd = open(argv[1], O_RDONLY, 0)) < 0)
+    {
         pdie("Open failed");
+    }
 
     /* Open file to be created. */
     if ((wfd = open(argv[2], O_WRONLY | O_CREAT | O_TRUNC,
                     S_IRUSR | S_IWUSR | S_IRGRP | S_IROTH)) < 0)
+    {
         pdie("Open failed");
+    }
 
     while (1)
     {
@@ -213,19 +233,26 @@ int main(int argc, char *argv[])
 
                 bufferChars -= writtenChars; /* Update. */
                 bp += writtenChars;
-            }
+
+            } // while
         }
         else if (bufferChars == 0) /* EOF reached. */
+        {
             break;
+        }
         else /* bufferChars < 0 --- read failure. */
+        {
             pdie("Read failed");
-    }
+        }
+
+    } // while
 
     close(rfd);
     close(wfd);
 
     return 0;
-}
+
+} // main
 
 /**********************************************************************
  * pdie --- Print error message, call perror, and die.
@@ -236,7 +263,8 @@ void pdie(const char *mesg)
 
     perror(mesg);
     exit(1);
-}
+
+} // pdie
 
 /**********************************************************************
  * die --- Print error message and die.
@@ -248,4 +276,51 @@ void die(const char *mesg)
     fputs(mesg, stderr);
     fputc('\n', stderr);
     exit(1);
-}
+
+} // die
+
+// Program to illustrate the getopt()
+// function in C
+
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char *argv[])
+{
+    int opt;
+
+    // put ':' in the starting of the
+    // string so that program can
+    // distinguish between '?' and ':'
+    while ((opt = getopt(argc, argv, ": if : lrx")) != -1)
+    {
+        switch (opt)
+        {
+        case 'i':
+        case 'l':
+        case 'r':
+            printf("option: %c\n", opt);
+            break;
+        case 'f':
+            printf("filename: %s\n", optarg);
+            break;
+        case ':':
+            printf("option needs a value\n");
+            break;
+        case '?':
+            printf("unknown option: %c\n", optopt);
+            break;
+
+        } // switch
+    }     // while
+
+    // optind is for the extra arguments
+    // which are not parsed
+    for (; optind < argc; optind++)
+    {
+        printf("extra arguments: %s\n", argv[optind]);
+    }
+
+    return 0;
+
+} // main
