@@ -5,6 +5,9 @@
 #include <sys/types.h>
 #include <sys/stat.h>
 #include <unistd.h>
+#include <string.h>
+#include <errno.h>
+
 
 #define MAX_BUF_SIZE 512
 
@@ -43,7 +46,7 @@ int main()
     fclose(fp);
 
     return (0);
-    
+
 } // main
 
 int main()
@@ -324,3 +327,180 @@ int main(int argc, char *argv[])
     return 0;
 
 } // main
+
+// c program to demonstrate
+// example of strlen() function.
+
+int main()
+{
+    char ch[] = {'g', 'e', 'e', 'k', 's', '\0'};
+
+    printf("Length of string is: %d", strlen(ch));
+
+    return 0;
+}
+// Output :
+
+// Length of string is: 5
+// Example 2:-
+
+// c program to demonstrate
+// example of strlen() function.
+
+int main()
+{
+    char str[] = "geeks";
+
+    printf("Length of string is: %d", strlen(str));
+
+    return 0;
+}
+
+// Output:
+// Length of string is: 5
+// Example 3:-
+
+// c program to demonstrate
+// example of strlen() function.
+
+int main()
+{
+    char *str = "geeks";
+
+    printf("Length of string is: %d", strlen(str));
+
+    return 0;
+}
+
+#include <stdio.h>
+
+// chdir function is declared
+// inside this header
+#include <unistd.h>
+int main()
+{
+    char s[100];
+
+    // printing current working directory
+    printf("%s\n", getcwd(s, 100));
+
+    // using the command
+    chdir("..");
+
+    // printing current working directory
+    printf("%s\n", getcwd(s, 100));
+
+    // after chdir is executed
+    return 0;
+}
+
+// Main Method
+int main()
+{
+
+    // changing the current
+    // working directory(cwd)
+    // to /usr
+    if (chdir("/usr") != 0)
+        perror("chdir() to /usr failed");
+
+    // changing the cwd to /tmp
+    if (chdir("/tmp") != 0)
+        perror("chdir() to /temp failed");
+
+    // there is no /error
+    // directory in my pc
+    if (chdir("/error") != 0)
+
+        // so chdir will return -1
+        perror("chdir() to /error failed");
+
+    return 0;
+}
+
+int main()
+{
+    FILE *fp;
+
+    fp = fopen("file.txt", "r");
+    if (fp == NULL)
+    {
+        printf("Error: %s\n", strerror(errno));
+    }
+
+    return (0);
+}
+
+
+int main()
+{
+    int fd = 0;
+    fd = open("./file.txt", O_RDWR | O_CREAT);
+    if (-1 == fd)
+    {
+        printf("open fail\n"); //文件打开失败
+        exit(-1);
+    }
+    else
+    {
+        printf("open ok\n"); //文件打开成功
+    }
+
+    char buf[] = "hello world";
+    int ret = write(fd, (void *)buf, strlen(buf));
+
+    if (-1 == ret) //文件写入失败
+    {
+        printf("write fail\n");
+        perror("write fail\n");
+    }
+    else
+    {
+        printf("write size : %d\n", strlen(buf));
+    }
+
+    lseek(fd, SEEK_SET, 0); //将文件光标移动到文件起始位置
+
+    char buf1[30] = {0};
+    ret = read(fd, buf1, sizeof(buf1)); //从文件读取数据
+    if (-1 == ret)                      //文件读取失败
+    {
+        printf("read fail\n");
+    }
+    printf("%s\n", buf1); //打印从文件读取到的数据
+    close(fd);            //关闭文件
+    return 0;
+}
+
+
+/*
+*  fork_test.c
+*  version 1
+*  Created on: 2010-5-29
+*      Author: wangth
+*/
+ 
+#include <unistd.h>
+#include <stdio.h>
+ 
+int main ()
+{
+    pid_t fpid; //fpid表示fork函数返回的值
+    int count = 0;
+    fpid = fork();
+    if (fpid < 0)
+        printf("error in fork!");
+    else if (fpid == 0)
+    {
+        printf("i am the child process, my process id is %d/n", getpid());
+        printf("我是爹的儿子/n");//对某些人来说中文看着更直白。
+        count++;
+    }
+    else
+    {
+        printf("i am the parent process, my process id is %d/n", getpid());
+        printf("我是孩子他爹/n");
+        count++;
+    }
+    printf("统计结果是: %d/n", count);
+    return 0;
