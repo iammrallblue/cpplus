@@ -77,7 +77,9 @@
     "cinttypes": "cpp",
     "stdlib.h": "c",
     "filesystem": "cpp",
-    "fcntl.h": "c"
+    "fcntl.h": "c",
+    "stdio.h": "c",
+    "pwd.h": "c"
   },
   "code-runner.runInTerminal": true,
   "cSpell.words": [
