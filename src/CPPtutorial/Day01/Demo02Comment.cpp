@@ -1,7 +1,11 @@
+#include <iostream>
+
+using namespace std;
+
 /*
     Comments in C++:
         1. Comments can be used to explain C++ code, and to make it more readable.
-        2. It can also be used to prevent execution when testing alternative code. 
+        2. It can also be used to prevent execution when testing alternative code.
         3. Comments can be singled-lined or multi-lined.
 
         Syntax:
@@ -16,6 +20,14 @@
 // This file only contains c++ comments
 
 /*
-    Mult-line Comment
-    
+    Multi-line Block Comment
+    Another line
+    Next Line
 */
+
+int main(int argc, char const *argv[])
+{
+    // Print out some text
+    cout << "Hello C++17!" << endl;
+    return 0;
+}
